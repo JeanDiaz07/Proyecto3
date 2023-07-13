@@ -1,0 +1,202 @@
+
+@font-face {
+    font-family: 'StartFighters';
+    src: url(Tipografia/stars_fighters/Stars\ Fighters.ttf) format('truetype');
+font-style: normal;
+font-weight: normal;
+}
+body{
+    background-image: url(imagenes/galaxia.gif);
+    padding: 1%;    
+    }
+header{
+padding: 2%;
+border: 4px solid rgb(15, 140, 179);
+color: white;
+font-family: 'StartFighters';
+text-align: center;
+}
+
+#secundario{
+
+    background-color: rgba(255, 255, 255, 0.055);
+    width: 100%;
+    height: auto;
+    -webkit-backdrop-filter:blur(15px);
+    backdrop-filter: blur(15px);
+    
+}
+
+
+
+
+
+.Contenido {
+padding: 2%;
+width: 100%;
+justify-items: center;
+display: flex;
+
+
+column-gap:3%;
+
+
+}
+.Contenido section{
+text-align: center;
+
+}
+
+.control{
+
+        width: 30%;
+        height: auto;
+        
+        border: 3px solid rgb(49, 98, 247);
+        text-align: center;
+    color: white;
+    float: left;
+}
+.control h2{
+font-size: 25px;
+
+}
+.control form button{
+    margin-top: 5px;
+    
+    
+    }
+.grafico{
+    
+        width: 65%;
+        height: auto;
+        color: white;
+    text-align: center;
+    padding: 1%;
+    border: 3px solid rgb(49, 98, 247);
+    float: left;
+    
+}
+.mundial{
+width: 50%;
+    color: white;
+padding: 1%;
+border: 3px solid rgb(49, 98, 247);
+text-align: center;
+float: left;
+
+
+}
+.mundial .imagenPers {
+width: 80%;
+padding:1% ;
+
+}
+.carbono{
+    width: 70px;
+}
+footer{
+width: 100%;
+height: auto;
+background-color: black;
+
+}
+footer h6 {
+    font-family: 'StartFighters';
+    color: white;
+}
+.slider{
+width: 100%;
+height: auto;
+    margin: auto;
+    overflow: hidden;
+    
+    padding: 1%;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation:  scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(250px * 10);
+    row-gap: 5%;
+
+}
+
+.slider .slide {
+
+width: 200px;
+}
+
+
+.slider div .slide-track img{
+width: 100%;
+height: auto;
+
+}
+
+@keyframes scroll {
+0% {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+100% {
+    -webkit-transform: translateX(calc(-200px * 5));
+    transform: translateX(calc(-200px * 5));
+}
+
+}
+@media only screen and (min-width:320px) and (max-width:980px) {
+
+header{
+padding: 2%;
+
+}
+header h1{
+font-size: 20px;
+
+
+}
+.Contenido{
+
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+    column-gap:3%;
+    row-gap: 4%;
+
+}
+
+
+.control{
+    
+padding: 2%;
+width: 30%;
+}
+.grafico{
+
+    width: 65%;
+
+}
+#Nombre{
+width: 70%;
+height: auto;
+
+}
+
+.mundial{
+width: 50%;
+height: auto;
+margin-left: 25%;
+margin-top: 2%;
+}
+.mundial .imagenPers {
+    width: 80%;
+    padding:1% ;
+    
+    }
+footer h6{
+font-size: 10px;
+
+}
+}
