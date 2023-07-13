@@ -9,6 +9,12 @@ const ImagenPersonaje = document.getElementById('imagenPers');
 
 let query = "";
 
+
+
+
+
+
+
 //console.log(NombrePersonaje);
 //se hace llamado al evento en la buscada dentro de la url de la api
 Button.addEventListener('click', async (e) => {
@@ -24,9 +30,9 @@ console.log(data.results);
 //para realizar la busqueda dentro de un forEach 
 data.results.forEach((element) => {
     ImagenPersonaje.innerHTML += `
-    <div class="Representacion" style="width:80%; , padding:1%;">
+    <div class="Representacion" >
     <h4>${element.name}</h4>
-    <img src=${element.image.url} alt=${element.name}>
+    <img src=${element.image.url} class="Hero" alt=${element.name}>
     </div>
     
     `
@@ -46,12 +52,12 @@ const Grafico = (data) => {
     
 
 
-const valor = data[0].results.map(function(numero){
+const valor = data.results[0].map(function(numero){
 
-    return numero.powerstats;
+    return numero.powerstats.name[0];
 });
 console.log(valor);
-const poder = data[0].results.map(function(nombre){
+const poder = data.results[0].map(function(nombre){
 
     return nombre.powerstats;
 });

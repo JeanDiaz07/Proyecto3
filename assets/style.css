@@ -50,12 +50,23 @@ text-align: center;
 .control{
 
         width: 30%;
-        height: auto;
+        height: 20%;
         
         border: 3px solid rgb(49, 98, 247);
         text-align: center;
     color: white;
     float: left;
+    padding: 1%;
+}
+.control input{
+    border-top:none ;
+    border-left: none;
+    border-right: none;
+border-color: rgb(3, 238, 255);
+background-color: transparent;
+color: white;
+
+
 }
 .control h2{
 font-size: 25px;
@@ -78,9 +89,9 @@ font-size: 25px;
     
 }
 .mundial{
-width: 50%;
+width: 40%;
     color: white;
-padding: 1%;
+padding: 1rem;
 border: 3px solid rgb(49, 98, 247);
 text-align: center;
 float: left;
@@ -88,9 +99,16 @@ float: left;
 
 }
 .mundial .imagenPers {
-width: 80%;
-padding:1% ;
-
+width: 15rem;
+height: auto;
+padding:1rem ;
+align-content: center;
+}
+.Hero{
+width: 15rem;
+height: auto;
+margin-left: 0.5rem;
+margin-right: 0.5rem;
 }
 .carbono{
     width: 70px;
@@ -185,14 +203,16 @@ height: auto;
 }
 
 .mundial{
-width: 50%;
+width: 44%;
 height: auto;
 margin-left: 25%;
 margin-top: 2%;
+padding: 1rem;
+text-align: center;
 }
 .mundial .imagenPers {
-    width: 80%;
-    padding:1% ;
+    width: 10rem ;
+    
     
     }
 footer h6{
