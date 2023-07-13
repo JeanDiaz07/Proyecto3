@@ -1,7 +1,7 @@
 //url:https://superheroapi.com/api.php/6731571410209674/search/
 
 
-
+//se realiza el llamado a cada elemento
 const NombrePersonaje = document.getElementById('Nombre');
 
 const Button = document.getElementById('Seleccionar');
@@ -10,7 +10,7 @@ const ImagenPersonaje = document.getElementById('imagenPers');
 let query = "";
 
 //console.log(NombrePersonaje);
-
+//se hace llamado al evento en la buscada dentro de la url de la api
 Button.addEventListener('click', async (e) => {
 e.preventDefault();
 query = NombrePersonaje.value;
@@ -20,7 +20,8 @@ const data = await response.json()
 //console.log(data);
 console.log(data.results);
 //console.log(data.results.powerstats)
-
+//se captura y se unen  la url y el dato ingresado 
+//para realizar la busqueda dentro de un forEach 
 data.results.forEach((element) => {
     ImagenPersonaje.innerHTML += `
     <div class="Representacion" style="width:80%; , padding:1%;">
@@ -34,23 +35,23 @@ data.results.forEach((element) => {
 
 
 
-
+console.log(data);
 
 //console.log(Grafico);
 const ctx = document.getElementById('myChart');
 
-const Grafico = (element) => {
+const Grafico = (data) => {
 //let Powerstats = element.powerstats;
   //  let Poder = Powerstats.flatMap((ele) => ele.name);
     
 
 
-const valor = element.data[0].map(function(numero){
+const valor = data[0].results.map(function(numero){
 
     return numero.powerstats;
 });
 console.log(valor);
-const poder = element.data[0].map(function(nombre){
+const poder = data[0].results.map(function(nombre){
 
     return nombre.powerstats;
 });
