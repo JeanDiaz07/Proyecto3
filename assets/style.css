@@ -5,6 +5,12 @@
 font-style: normal;
 font-weight: normal;
 }
+@font-face {
+    font-family: 'Playkidz';
+    src: url(Tipografia/playkidz_2/Playkidz.ttf) format('truetype');
+font-style: normal;
+font-weight: normal;
+}
 body{
     background-image: url(imagenes/galaxia.gif);
     padding: 1%;    
@@ -46,7 +52,21 @@ column-gap:3%;
 text-align: center;
 
 }
+.infor {
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    margin: 5% 10% 4% 10%;
+    border-top: 3px white;
+}
+.infor .descripcion {
+    font-family:  'Playkidz';
+    font-size: 22px;
+    text-align: center;
+color: rgb(10, 156, 240);
 
+
+}
 .control{
 
         width: 30%;
@@ -77,6 +97,7 @@ font-size: 25px;
     
     
     }
+    
 .grafico{
     
         width: 65%;
@@ -184,7 +205,10 @@ font-size: 20px;
     row-gap: 4%;
 
 }
+.info{
+font-size: 17px;
 
+}
 
 .control{
     

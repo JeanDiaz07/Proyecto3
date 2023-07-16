@@ -6,10 +6,9 @@ const NombrePersonaje = document.getElementById('Nombre');
 
 const Button = document.getElementById('Seleccionar');
 const ImagenPersonaje = document.getElementById('imagenPers');
-
+const lista = document.getElementById('lista');
+const form = document.getElementById('formulario');
 let query = "";
-
-
 
 
 
@@ -19,15 +18,31 @@ let query = "";
 //se hace llamado al evento en la buscada dentro de la url de la api
 Button.addEventListener('click', async (e) => {
 e.preventDefault();
+
 query = NombrePersonaje.value;
 const URL =  `https://superheroapi.com/api.php/6731571410209674/search/${query}`;
 const response = await fetch(URL)
 const data = await response.json()
+
+// conexion de la misma url para los datos del graficos
+    const URLGRAF =  `https://superheroapi.com/api.php/6731571410209674/search/${query}`;
+    const responsegraf = await fetch(URLGRAF)
+    const dato= await responsegraf.json()
+
+    let nombre = dato.results[0];
+    
+
 //console.log(data);
-console.log(data.results);
+
+
 //console.log(data.results.powerstats)
+
+
+
 //se captura y se unen  la url y el dato ingresado 
-//para realizar la busqueda dentro de un forEach 
+//para realizar la busqueda dentro de un forEach para llamar la imagen de la busqueda y presentar en el html
+
+    
 data.results.forEach((element) => {
     ImagenPersonaje.innerHTML += `
     <div class="Representacion" >
@@ -36,54 +51,46 @@ data.results.forEach((element) => {
     </div>
     
     `
-
+        
 });
 
 
+console.log(nombre.powerstats);
 
-console.log(data);
 
-//console.log(Grafico);
-const ctx = document.getElementById('myChart');
 
-const Grafico = (data) => {
-//let Powerstats = element.powerstats;
-  //  let Poder = Powerstats.flatMap((ele) => ele.name);
+
     
+//arreglo de super poderes
+    const poder = [ "Combate" , "duravilidad" , "inteligencia" , "power" , "velocidad" , "strength"];
 
-
-const valor = data.results[0].map(function(numero){
-
-    return numero.powerstats.name[0];
-});
-console.log(valor);
-const poder = data.results[0].map(function(nombre){
-
-    return nombre.powerstats;
-});
-console.log(poder);
-const chart = new Chart(ctx, {
-    type: 'pie',
+ //ingreso del valor para el grafico    
+    const valor = [nombre.powerstats.combat, nombre.powerstats.durability, nombre.powerstats.intelligence, nombre.powerstats.power, nombre.powerstats.speed, nombre.powerstats.strength];
+    
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
+    type: 'bar',
     data: {
-            labels: poder,
-            datasets: [{
-                        label: Grafico.name,
-                        data:valor ,
-                        backgroundColor:[
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)',
-                        'rgb(205, 99, 132)',
-                        'rgb(250, 162, 235)',
-                        'rgb(50, 205, 86)'
-                        ],
-                        hoverOffset: 4
-    }]
-            }
-    
-    
-});
-};
+        labels: poder,
+        datasets: [{
+        label: nombre.name,
+        data: valor,
+        borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+        y: {
+            beginAtZero: true
+        }
+        }
+                }
+    });
 
+    
 
 });
+
+
+
+
