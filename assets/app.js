@@ -59,7 +59,6 @@ console.log(nombre.powerstats);
 
 
 
-
     
 //arreglo de super poderes
     const poder = [ "Combate" , "duravilidad" , "inteligencia" , "power" , "velocidad" , "strength"];
