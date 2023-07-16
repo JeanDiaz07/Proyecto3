@@ -1,5 +1,5 @@
 
-Dashboard de superheroes y villanos
+#Dashboard de superheroes y villanos#
 Se trata de un sistema en donde su primera caracteristica que debe ser un dashboard el cual esta totalmente efocado en tematica de superherores 
 y villanos el cual realizara llamado desde una api para llamar los datos y prsentando cada capacidad de poder de un personaje tambien con su
 respectiva imagen del personaje 
@@ -8,7 +8,7 @@ respectiva imagen del personaje
 
 
 
-Construido con 🛠️
+##Construido con 🛠️##
 
 HTML- Estructura
 CSS - Parte de diseño
