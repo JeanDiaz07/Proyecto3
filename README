@@ -1,5 +1,5 @@
 
-**# Dashboard de superheroes y villanos**
+# Dashboard de superheroes y villanos
 
 Se trata de un sistema en donde su primera caracteristica que debe ser un dashboard el cual esta totalmente efocado en tematica de superherores y villanos el cual realizara llamado desde una api para llamar los datos y prsentando cada capacidad de poder de un personaje tambien con su respectiva imagen del personaje 
 
@@ -7,11 +7,8 @@ Se trata de un sistema en donde su primera caracteristica que debe ser un dashbo
 
 * Al ingresar ingresar vera el nombre dela pagina seguidode un carrousel en donde  despues con la descripcion de la pagina ya pasando todo eso haran 3 divisiones los cuales el primero tendra el formulario de solicitud, por lo que se ingresar el nombre del personaje al buscar aparecera el grafico al lado con todas las habilidades en una escala y la imagen del personaje.
   
-  ##Representacion
-  <img src="assets/imagenes/proyecto.png" alt="representacion">
-
-
-
+##Representacion
+  
 ## Construido con 🛠️
 
 * HTML- Estructura
@@ -25,4 +22,4 @@ Url:https://superheroapi.com/index.html
 
 ## Autor ✒️
 Jean Diaz Retamal
->>>>>>> 5b96543 (Readme)
+
